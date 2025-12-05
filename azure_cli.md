@@ -65,9 +65,7 @@ az vm deallocate \
 ```bash
 az vm delete \
   --resource-group helen \
-  --name myVm01 \
-  --nic-delete-option delete \
-  --os-disk-delete-option delete 
+  --name myVm01 
 ```
 
 ## Aufgabe 2: Eine VM erstellen und NGINX per Cloud-Init installieren
@@ -93,6 +91,8 @@ az vm create \
   --image Ubuntu2204 \
   --admin-username azureuser \
   --generate-ssh-keys \
+  --nic-delete-option delete \
+  --os-disk-delete-option delete 
   --custom-data cloud-init-nginx.yaml
 ```
 Notiere dir die public ip!
