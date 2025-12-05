@@ -167,7 +167,7 @@ az storage account create \
 az storage blob service-properties update \
   --account-name mystorage24060 \
   --static-website \
-  --index-document index.html \
+  --index-document index.html 
 ```
 3. Datei hochladen
 ```bash
