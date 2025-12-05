@@ -25,7 +25,7 @@ az login
 | `az deployment group/sub` | ARM/Bicep Deployments (IaC)             |
 
 ## Aufgabe 1: Eine Linux VM starten
-Wir erstellen uns erstmal einen SSH-Key
+Wir erstellen uns erstmal einen SSH-Key (https://learn.microsoft.com/en-us/azure/virtual-machines/linux/mac-create-ssh-keys)
 ```bash
 ssh-keygen -t rsa -b 4096 -f ~/.ssh/azure_rsa
 ```
