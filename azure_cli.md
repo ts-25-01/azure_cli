@@ -25,6 +25,11 @@ az login
 | `az deployment group/sub` | ARM/Bicep Deployments (IaC)             |
 
 ## Aufgabe 1: Eine Linux VM starten
+Wir erstellen uns erstmal einen SSH-Key
+```bash
+ssh-keygen -t rsa -b 4096 -f ~/.ssh/azure_rsa
+```
+
 Finde zunächst den Namen deiner eigenen Ressourcengruppe heraus mit `az group list` und trage den Namen hinter --resource-group ein!
 ```bash
 az vm create \
@@ -32,7 +37,7 @@ az vm create \
   --name myVm01 \
   --image Ubuntu2204 \
   --admin-username azureuser \
-  --generate-ssh-keys
+  --ssh-key-values ~/.ssh/azure_rsa.pub
 ```
 **Achtung**: Ersetze die Ressourcengruppe durch den Namen deiner eigenen!
 
