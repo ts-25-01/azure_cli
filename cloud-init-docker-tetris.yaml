@@ -1,0 +1,24 @@
+#cloud-config
+package_update: true
+packages:
+  - docker.io
+runcmd:
+  # Docker aktivieren
+  - systemctl enable docker
+  - systemctl start docker
+
+
+    # Warten, bis Docker wirklich bereit ist
+  - sleep 10
+
+  # Zur Sicherheit: Berechtigungen für den ubuntu-User
+  - usermod -aG docker azureuser
+
+  # Beispiel: cooles Webserver-Projekt (Tetris)
+  # Tetris-Container sauber starten
+  - docker pull uzyexe/tetris
+  - docker run -d \
+      --name tetris \
+      -p 80:80 \
+      uzyexe/tetris
+
