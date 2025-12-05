@@ -61,6 +61,12 @@ az vm deallocate \
   --resource-group helen \
   --name myVm01
 ```
+#### VM löschen
+```bash
+az vm delete \
+  --resource-group helen \
+  --name myVm01
+```
 
 ## Aufgabe 2: Eine VM erstellen und NGINX per Cloud-Init installieren
 1. Erstelle eine neue Datei mit dem Namen `cloud-init-nginx.yaml` (so wie User Data Script in AWS)
