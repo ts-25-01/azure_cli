@@ -65,7 +65,9 @@ az vm deallocate \
 ```bash
 az vm delete \
   --resource-group helen \
-  --name myVm01
+  --name myVm01 \
+  --nic-delete-option delete \
+  --os-disk-delete-option delete 
 ```
 
 ## Aufgabe 2: Eine VM erstellen und NGINX per Cloud-Init installieren
