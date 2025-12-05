@@ -17,8 +17,5 @@ runcmd:
   # Beispiel: cooles Webserver-Projekt (Tetris)
   # Tetris-Container sauber starten
   - docker pull uzyexe/tetris
-  - docker run -d \
-      --name tetris \
-      -p 80:80 \
-      uzyexe/tetris
+  - docker run -d --name tetris -p 80:80 uzyexe/tetris
 
