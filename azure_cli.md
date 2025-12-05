@@ -25,6 +25,7 @@ az login
 | `az deployment group/sub` | ARM/Bicep Deployments (IaC)             |
 
 ## Aufgabe 1: Eine Linux VM starten
+Finde zunächst den Namen deiner eigenen Ressourcengruppe heraus mit `az group list` und trage den Namen hinter --resource-group ein!
 ```bash
 az vm create \
   --resource-group helen \
